@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yemen-regions-py"
+version = "1.0.0"
+description = "A Python library for Yemen regions (governorates, districts, uzlahs, villages) with Arabic and English support."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "YounisDany", email = "younis@example.com"}
+]
+maintainers = [
+    {name = "YounisDany", email = "younis@example.com"}
+]
+keywords = ["yemen", "regions", "governorates", "districts", "arabic", "localization"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Localization",
+    "Topic :: Text Processing :: Linguistic",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=22.0",
+    "flake8>=5.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/YounisDany/yemen-regions-py"
+Repository = "https://github.com/YounisDany/yemen-regions-py"
+Issues = "https://github.com/YounisDany/yemen-regions-py/issues"
+Documentation = "https://github.com/YounisDany/yemen-regions-py#readme"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yemen_regions_py*"]
+
+[tool.setuptools.package-data]
+yemen_regions_py = ["data/*.json"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
