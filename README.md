@@ -509,12 +509,6 @@ mypy yemen_regions_py/
 
 هذا المشروع مرخص تحت رخصة MIT - انظر ملف [LICENSE](LICENSE) للتفاصيل.
 
-## الشكر والتقدير | Acknowledgments
-
-- بيانات المناطق اليمنية من [Yemen Open Source](https://github.com/YemenOpenSource/Yemen-info)
-- مستوحى من [Yemen Regions Widget](https://github.com/YounisDany/yemen-regions-widget)
-
----
 
 <div align="center">
 
